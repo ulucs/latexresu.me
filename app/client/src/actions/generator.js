@@ -71,6 +71,9 @@ function generateResume(payload) {
     const { fetch, URL } = window
     const res = await fetch('/api/generate/resume', req)
 
+    window.r = res
+    console.log(res.status)
+
     if (!res.ok) {
       dispatch(resumeFailure())
     } else {

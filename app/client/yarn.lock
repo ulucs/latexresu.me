@@ -3625,7 +3625,7 @@ pbkdf2@^3.0.3:
   dependencies:
     create-hmac "^1.1.2"
 
-pdfjs-dist@1.8.177:
+pdfjs-dist@^1.7.339:
   version "1.8.177"
   resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-1.8.177.tgz#05bb8cd183dcf3582d5392c2f8af61a3b171be13"
   dependencies:
@@ -4075,7 +4075,7 @@ react-deep-force-update@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.0.1.tgz#4f7f6c12c3e7de42f345992a3c518236fa1ecad3"
 
-react-dom@15.4:
+react-dom@15.4, react-dom@>=15.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -4094,12 +4094,13 @@ react-hot-loader@^3.0.0-beta.6:
     redbox-react "^1.2.5"
     source-map "^0.4.4"
 
-react-pdf-js@^1.0.35:
-  version "1.0.35"
-  resolved "https://registry.yarnpkg.com/react-pdf-js/-/react-pdf-js-1.0.35.tgz#735fe782c3ac054f9834583dede67f8508f28cb3"
+react-pdf@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/react-pdf/-/react-pdf-1.6.1.tgz#dc528ebee6b7e7864db5036d5d52209b67a8e0d1"
   dependencies:
-    pdfjs-dist "1.8.177"
-    prop-types "^15.5.6"
+    pdfjs-dist "^1.7.339"
+    react ">=15.0"
+    react-dom ">=15.0"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -4140,7 +4141,7 @@ react-router@^4.1.1:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react@15.4:
+react@15.4, react@>=15.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:

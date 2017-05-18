@@ -3,24 +3,36 @@ import React from 'react'
 import { object, number, string } from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import PDF from 'react-pdf-js'
-import { Row, LoadingBar } from '../bulma'
+import PDF from 'react-pdf'
+import { Row, ErrorMessage, LoadingBar } from '../bulma'
 import { GeneratorActions } from '../../actions'
 import BlankPDF from '../../assets/blank.pdf'
 import '../../styles/components/preview.styl'
 
 function Preview({ url, page, status, actions }) {
+  console.log(status)
+
   return (
     <section id='preview'>
       <LoadingBar hidden={status !== 'pending'} />
+      {status === 'failure' ? <ErrorMessage text='PDF Generation failure.' /> : null}
       <div className='download-buttons'>
-        <a href={url} download='resume.pdf' className='button'>
+        <a
+          href={url}
+          download='resume.pdf'
+          className='button'
+          disabled={status !== 'success'}
+        >
           <span className='icon is-small'>
             <i className='fa fa-file-pdf-o' />
             Download PDF
           </span>
         </a>
-        <button className='button' onClick={() => actions.downloadSource()}>
+        <button
+          disabled={status !== 'success'}
+          className='button'
+          onClick={() => actions.downloadSource()}
+        >
           <span className='icon is-small'>
             <i className='fa fa-file-code-o' />
             Download Source
@@ -35,13 +47,14 @@ function Preview({ url, page, status, actions }) {
       <Row>
         <PDF
           file={url || BlankPDF}
-          page={page}
-          scale={4}
-          onDocumentComplete={(pageCount) => {
-            actions.setPageCount(pageCount)
+          pageIndex={page - 1}
+          onDocumentLoad={({ total }) => {
+            actions.setPageCount(total)
             actions.setPage(1)
           }}
-          onPageComplete={page => actions.setPage(page)}
+          onDocumentError={() => console.log('nooooooooooooooooo')}
+          error={<ErrorMessage text='PDF Generation failure.' />}
+          noData={<ErrorMessage text='Please fill in your info.' />}
         />
       </Row>
     </section>

@@ -15,6 +15,7 @@ h1
     .card
       opacity .7
       transition all .4s ease
+      box-shadow 0 2px 20px rgba(145, 150, 187, 0.2), 0 0 0 1px rgba(145, 150, 187, 0.2)
 
       &:hover
         cursor zoom-in
@@ -23,10 +24,10 @@ h1
     &.selected
       .card
         opacity 1
-        box-shadow 0 2px 20px rgba(255, 255, 255, 1), 0 0 0 1px rgba(255, 255, 255, 1)
+        box-shadow 0 2px 20px rgba(128, 191, 162, 0.3), 0 0 0 1px rgba(128, 191, 162, 0.3)
 
       button
-        border 1px solid lighten($templates-button-border-color, 100%)
+        border 1px solid darken($templates-button-border-color, 100%)
 
     button
       border 1px solid $templates-button-border-color

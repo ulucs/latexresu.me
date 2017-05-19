@@ -16,19 +16,16 @@
   max-height $side-nav-height
   overflow-y auto
   overflow-x hidden
-  box-shadow 1px 0px 0 rgba(219, 219, 219, 0.3)
+  box-shadow 2px 0px 0 rgba(219, 219, 219, 0.3)
   z-index 1000
 
   hr
     border 0
     height 1px
-    width 80%
+    width 75%
     margin-top 0
     margin-bottom 25px
-    background-image -webkit-linear-gradient(left, #000, #8c8b8b, #000)
-    background-image -moz-linear-gradient(left, #000, #8c8b8b, #000)
-    background-image -ms-linear-gradient(left, #000, #8c8b8b, #000)
-    background-image -o-linear-gradient(left, #000, #8c8b8b, #000)
+    background-image -webkit-linear-gradient(left, #eee, #aaa, #eee)
 
   .icon
     display inline-block
@@ -75,8 +72,8 @@
           background-color transparent
 
       &:hover
-        background-color darken($side-nav-active-background-color, 30%)
-        color oc-gray-6
+        background-color $side-nav-hover-background-color
+        color $side-nav-hover-color
 
       &.is-active
         background-color $side-nav-active-background-color

@@ -11,6 +11,9 @@
   @media screen and (max-width: 768px)
     margin-left 0
 
+  .card
+    border-radius 2.5px
+
   .container
     padding 20px
     margin 0 auto
@@ -18,7 +21,7 @@
 
     hr
       margin 100px 0
-      background-image -webkit-linear-gradient(left, #000, #ccc, #000)
+      background-image -webkit-linear-gradient(left, #eee, #aaa, #eee)
 
     p:focus
       outline none
@@ -37,6 +40,7 @@
         background-color transparent
         border none
         border-bottom 1px solid $input-border-color
+        box-shadow none
         outline none
         border-radius 0
         padding 0
@@ -101,3 +105,8 @@
       .row, .column
         margin-bottom 0
         padding-bottom 0
+
+    #education
+      display flex
+      flex-direction column
+      align-items center

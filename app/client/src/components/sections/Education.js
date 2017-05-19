@@ -3,6 +3,7 @@ import { number, object } from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { School } from './fragments'
+import { Container } from '../bulma'
 import { UIActions, FormActions } from '../../actions'
 
 function Education({ schoolCount, actions }) {
@@ -10,7 +11,11 @@ function Education({ schoolCount, actions }) {
     <section id='education'>
       <h1>Your Educational Background</h1>
       {Array.from({ length: schoolCount }).map((_, index) => (
-        <School key={index} index={index} />
+        <div className='card'>
+          <Container>
+            <School key={index} index={index} />
+          </Container>
+        </div>
       ))}
       <div className='section-buttons'>
         <button type='button' onClick={() => actions.addSchool()}>Add School</button>

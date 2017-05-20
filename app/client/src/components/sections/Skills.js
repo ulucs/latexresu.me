@@ -8,7 +8,7 @@ import { UIActions, FormActions } from '../../actions'
 
 function Skills({ skillCount, actions }) {
   return (
-    <section className='form-section' id='skills'>
+    <section id='skills'>
       {Array.from({ length: skillCount }).map((_, index) => (
         <Skill key={index} index={index} />
       ))}

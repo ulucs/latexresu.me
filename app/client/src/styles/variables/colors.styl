@@ -1,6 +1,7 @@
 @import './open-color'
 
 $background-color = oc-white
+$app-primary-color = #00b8d4
 
 // Form Stuff
 $input-text-color = #757575
@@ -18,21 +19,25 @@ $home-logo-color = oc-black
 $home-button-color = $home-text-color
 
 // TopBar
-$top-bar-background-color = $background-color
+$top-bar-background-color = $app-primary-color
 $top-bar-logo-color = oc-white
-$top-bar-logo-emphasis-color = oc-black
-$top-bar-menu-color = oc-white
+$top-bar-logo-emphasis-color = oc-white
+$top-bar-menu-color = lighten($app-primary-color, 35%)
+$top-bar-menu-background-color = $app-primary-color
 
 // SideNav
-$side-nav-background-color = $top-bar-background-color
-$side-nav-hover-background-color = oc-grape-2
-$side-nav-hover-color = oc-white
-$side-nav-active-background-color = oc-grape-3
-$side-nav-active-color = oc-black
-$preview-button-color = oc-grape-4
+$side-nav-background-color = oc-white
+$side-nav-hover-background-color = lighten($app-primary-color, 5%)
+$side-nav-hover-color = oc-gray-0
+$side-nav-active-background-color = lighten($app-primary-color, 10%)
+$side-nav-active-color = oc-white
+$preview-button-color = darken($app-primary-color, 5%)
+$preview-button-border-color = lighten($app-primary-color, 5%)
+$preview-button-hover-border-color = darken($app-primary-color, 20%)
 
 // Content
 $content-background-color = darken($background-color, 1%)
+$section-heading-color = oc-black
 
 // Templates
 $templates-button-color = $home-button-color

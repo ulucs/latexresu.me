@@ -7,7 +7,7 @@ import { UIActions, FormActions } from '../../actions'
 
 function Experience({ jobCount, jobDuties, actions }) {
   return (
-    <section className='form-section' id='education'>
+    <section id='experience'>
       <h1>Your Work Experience</h1>
       {Array.from({ length: jobCount }).map((_, index) => (
         <Job

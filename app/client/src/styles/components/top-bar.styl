@@ -1,3 +1,4 @@
+@import '../variables/sizes'
 @import '../variables/colors'
 
 #top-bar
@@ -5,13 +6,14 @@
   position fixed
   min-width 100%
   z-index 1024
-  height 3.25em
-  box-shadow 0px 2px 0 rgba(219, 219, 219, 0.3)
+  height $top-bar-height
+  box-shadow 0 2px 0 rgba(230, 230, 230, 0.8)
 
-  .nav-item a:hover, a.nav-item:hover
-    color #7a7a7a
+  .nav-item
+    color $top-bar-logo-color
 
   .hero-brand
+    font-size .85rem
     font-family Earth Orbiter Title
     letter-spacing 10px
 
@@ -24,13 +26,13 @@
     cursor pointer
 
     &:hover
-      background-color $top-bar-menu-color
+      background-color $top-bar-menu-background-color
 
     @media screen and (min-width: 769px)
       display none
 
     span
-      background-color #4a4a4a
+      background-color $top-bar-menu-color
       display block
       height 1px
       left 50%

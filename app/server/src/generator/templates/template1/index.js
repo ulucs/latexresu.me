@@ -8,6 +8,7 @@ function template1({ profile, schools, jobs, projects, skills, awards }) {
     \\usepackage{amsmath}
     \\usepackage{amssymb}
     \\usepackage{textcomp}
+    \\usepackage[T1]{fontenc}
     \\textheight=10in
     \\pagestyle{empty}
     \\raggedright

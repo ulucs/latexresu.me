@@ -205,6 +205,8 @@ function generateHeader() {
     \\usepackage{tocloft}
     \\usepackage{enumitem}
     \\usepackage{textcomp}
+    \\usepackage[T1]{fontenc}
+    \\usepackage[utf8]{inputenc}
 
 
     %-----------------------------------------------------------

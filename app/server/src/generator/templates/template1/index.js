@@ -9,6 +9,7 @@ function template1({ profile, schools, jobs, projects, skills, awards }) {
     \\usepackage{amssymb}
     \\usepackage{textcomp}
     \\usepackage[T1]{fontenc}
+    \\usepackage[utf8]{inputenc}
     \\textheight=10in
     \\pagestyle{empty}
     \\raggedright

@@ -6,6 +6,8 @@ function template5({ profile, schools, jobs, projects, skills, awards }) {
     \\documentclass[line,margin]{res}
     \\usepackage[none]{hyphenat}
     \\usepackage{textcomp}
+    \\usepackage[T1]{fontenc}
+    \\usepackage[utf8]{inputenc}
     \\begin{document}
         ${generateProfileSection(profile)}
         \\begin{resume}

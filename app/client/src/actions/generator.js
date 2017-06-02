@@ -50,9 +50,9 @@ function saveResumeData(payload) {
 
 function generateResume(payload) {
   return async (dispatch, getState) => {
-    const { status } = getState().generator
+    const { status, resumeData } = getState().generator
 
-    if (status === 'pending' || isEqual(true, false)) {
+    if (status === 'pending' || isEqual(resumeData, payload)) {
       return
     }
 

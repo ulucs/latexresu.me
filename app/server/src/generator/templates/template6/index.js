@@ -34,12 +34,9 @@ function generateProfileSection(profile) {
     if (names.length === 1) {
       nameStart = names[0]
       nameEnd = ''
-    } else if (names.length === 2) {
-      nameStart = names[0]
-      nameEnd = names[1]
     } else {
-      nameStart = names.slice(0, names.length - 1).join(' ')
-      nameEnd = names[names.length - 1]
+      nameStart = names[0]
+      nameEnd = names.slice(1, names.length).join(' ')
     }
   }
 
@@ -102,7 +99,7 @@ function generateExperienceSection(jobs) {
 
         let jobLine = ''
         let dateRange = ''
-        let dutyLines
+        let dutyLines = ''
 
         if (name) {
           jobLine += name
@@ -130,7 +127,7 @@ function generateExperienceSection(jobs) {
 
         return `
           \\entry
-            {${dateRange}}
+            {${dateRange || ''}}
             {${jobLine}}
             {${location || ''}}
             {${dutyLines}}

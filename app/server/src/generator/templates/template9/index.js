@@ -185,6 +185,7 @@ function generateHeader() {
   return stripIndent`
     \\usepackage[english]{babel}
     \\usepackage[utf8x]{inputenc}
+    \\usepackage[T1]{fontenc}
     \\usepackage[protrusion=true,expansion=true]{microtype}
     \\usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
     \\usepackage[margin=0.75in]{geometry}

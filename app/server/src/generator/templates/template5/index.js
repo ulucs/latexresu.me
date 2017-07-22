@@ -5,6 +5,7 @@ function template5({ profile, schools, jobs, projects, skills, awards }) {
   return stripIndent`
     \\documentclass[line,margin]{res}
     \\usepackage[none]{hyphenat}
+    \\usepackage[T1]{fontenc}
     \\usepackage{textcomp}
     \\begin{document}
         ${generateProfileSection(profile)}

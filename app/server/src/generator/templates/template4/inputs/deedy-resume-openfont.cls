@@ -12,6 +12,7 @@
 \usepackage[hmargin=1.25cm, vmargin=0.7cm]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}

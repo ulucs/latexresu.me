@@ -39,6 +39,7 @@
 
 % Set font face
 \usepackage{fontspec}
+\usepackage[T1]{fontenc}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 

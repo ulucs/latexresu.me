@@ -10,6 +10,7 @@
 
 \usepackage{enumitem}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
